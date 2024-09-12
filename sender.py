@@ -35,13 +35,40 @@ payload2 = {
     'number': '66'
 }
 
+payload3 = {
+    "data": {
+        "id": "E11C4FA3348B600C",
+        "order_items": [
+            {
+                "id": "1",
+                "plu_id": "chick-bk",
+                "sku": "100, 130",
+                "item_name": "Chicken Bowl Korean",
+                "item_price_numeric": 43000,
+                "eater_notes": "Telur matang",
+                "quantity": 2
+            },
+            {
+                "id": "2",
+                "plu_id": "prk-bk",
+                "sku": "200, 220",
+                "item_name": "Pork Belly Bowl",
+                "item_price_numeric": 60000.0,
+                "eater_notes": "",
+                "quantity": 1
+            }
+        ]
+    },
+    "time": "2023-07-21T05:01:32.327Z",
+    "type": "order",
+    "event": "in_progress"
+}
+
 # Send the HTTP POST request
 try:
-    response = requests.post(url, json=payload1)
+    response = requests.post(url, json=payload3)
     print("Webhook sent. Server responded with:", response.text)
-    time.sleep(2)
-    response = requests.post(url, json=payload2)
-    print("Webhook sent. Server responded with:", response.text)
+
 
 
 except requests.exceptions.RequestException as e:
