@@ -1,1 +1,1 @@
-This is Crisbar kitchen scale project/
+*Crisbar kitchen scale project*
